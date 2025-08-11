@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.1 on win32)" generated="2024-09-20T19:42:10.090807" rpa="false" schemaversion="5">
+<suite id="s1" name="Test2-1" source="D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\tests\test2-1.robot">
+<test id="s1-t1" name="Happy Path Flow" line="64">
+<kw name="Open the browser" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-09-20T19:42:10.917606" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Softwares\\Pycharm\\RobotFramework\\SR_Automation\\SR_Automation\\Regression Testing\\results\\API-Results\\browser\\traces\\b74580c0-0d90-4666-a9ec-e58de1a2867c"}</msg>
+<msg time="2024-09-20T19:42:11.083946" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Softwares\\Pycharm\\RobotFramework\\SR_Automation\\SR_Automation\\Regression Testing\\results\\API-Results\\browser\\traces\\b74580c0-0d90-4666-a9ec-e58de1a2867c"}</msg>
+<arg>headless=true</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-09-20T19:42:10.917606" elapsed="0.166340"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-09-20T19:42:12.199322" level="INFO">Successfully initialized new page object and opened url: https://uat-api.squarerisk.net</msg>
+<msg time="2024-09-20T19:42:12.199322" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-09-20T19:42:11.083946" elapsed="1.115376"/>
+</kw>
+<status status="PASS" start="2024-09-20T19:42:10.917606" elapsed="1.281716"/>
+</kw>
+<kw name="Http" owner="Browser">
+<msg time="2024-09-20T19:42:12.615905" level="INFO">{'status': 200, 'body': {'statusCode': 200, 'message': 'Operation successful', 'result': {'email': 'abc@partnertestagency1.com', 'parentCompany': {'businessType': 'REFERRAL', 'name': 'PartnerAPI', 'companyId': 794}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNSwiZW1haWwiOiJhYmNAcGFydG5lcnRlc3RhZ2VuY3kxLmNvbSIsInBhcmVudENvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiUkVGRVJSQUwiLCJuYW1lIjoiUGFydG5lckFQSSIsImNvbXBhbnlJZCI6Nzk0fSwicGxhdGZvcm1EYXRhIjp7ImFwaUtleSI6IjQ3NTA0M2QwLWUxZWEtNGI4YS05YjM3LTExZWFlMThhYmQ3NiIsIndlYkhvb2tVcmwiOm51bGx9LCJyb2xlIjp7Im5hbWUiOiJBZ2VuY3kgYWRtaW4iLCJzbHVnIjoiQUdFTkNZX0FETUlOIn0sImNvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiQUdFTkNZIiwibmFtZSI6IlBhcnRuZXIgVGVzdCBBZ2VuY3kxIiwiY29tcGFueUlkIjo4MDJ9LCJpYXQiOjE3MjY4NDE1MzMsImV4cCI6MTcyNjkyNzkzM30.p_mAnrdn7MZOtMP7xMY4o4mNHSXR3bpjBnlTbKliVAM'}}, 'headers': {'access-control-allow-origin': '*', 'api-version': 'v2', 'cache-control': 'no-store, no-cache, must-revalidate, private', 'content-length': '782', 'content-type': 'application/json', 'date': 'Fri, 20 Sep 2024 14:12:13 GMT', 'last-modified': 'Thu Sep 19 2024 09:41:33 GMT+0000 (Coordinated Universal Time)', 'ratelimit': 'limit=300, remaining=299, reset=269', 'ratelimit-policy': '300;w=300', 'server': 'nginx', 'vary': 'Accept-Encoding', 'x-powered-by': 'Express'}, 'type': 'basic', 'statusText': '', 'url': 'https://uat-api.squarerisk.net/api/v2/partner/auth/token', 'ok': True, 'redirected': False}</msg>
+<msg time="2024-09-20T19:42:12.615905" level="INFO">${Get_Token_Response} = {'status': 200, 'body': {'statusCode': 200, 'message': 'Operation successful', 'result': {'email': 'abc@partnertestagency1.com', 'parentCompany': {'businessType': 'REFERRAL', 'name': 'PartnerAPI', 'co...</msg>
+<var>${Get_Token_Response}</var>
+<arg>${Get_Token_API}</arg>
+<arg>POST</arg>
+<arg>{"apiKey":"${Api_Key}", "slug":"PARTNERAPI_REFERRAL", "partnerEmail":"abc@partnertestagency1.com", "partnerName": "Partner Test Agency1"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="PASS" start="2024-09-20T19:42:12.199909" elapsed="0.415996"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.615905" level="INFO">200</msg>
+<arg>${Get_Token_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.615905" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.615905" level="INFO">{'statusCode': 200, 'message': 'Operation successful', 'result': {'email': 'abc@partnertestagency1.com', 'parentCompany': {'businessType': 'REFERRAL', 'name': 'PartnerAPI', 'companyId': 794}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNSwiZW1haWwiOiJhYmNAcGFydG5lcnRlc3RhZ2VuY3kxLmNvbSIsInBhcmVudENvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiUkVGRVJSQUwiLCJuYW1lIjoiUGFydG5lckFQSSIsImNvbXBhbnlJZCI6Nzk0fSwicGxhdGZvcm1EYXRhIjp7ImFwaUtleSI6IjQ3NTA0M2QwLWUxZWEtNGI4YS05YjM3LTExZWFlMThhYmQ3NiIsIndlYkhvb2tVcmwiOm51bGx9LCJyb2xlIjp7Im5hbWUiOiJBZ2VuY3kgYWRtaW4iLCJzbHVnIjoiQUdFTkNZX0FETUlOIn0sImNvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiQUdFTkNZIiwibmFtZSI6IlBhcnRuZXIgVGVzdCBBZ2VuY3kxIiwiY29tcGFueUlkIjo4MDJ9LCJpYXQiOjE3MjY4NDE1MzMsImV4cCI6MTcyNjkyNzkzM30.p_mAnrdn7MZOtMP7xMY4o4mNHSXR3bpjBnlTbKliVAM'}}</msg>
+<arg>${Get_Token_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.615905" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.615905" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNSwiZW1haWwiOiJhYmNAcGFydG5lcnRlc3RhZ2VuY3kxLmNvbSIsInBhcmVudENvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiUkVGRVJSQUwiLCJuYW1lIjoiUGFydG5lckFQSSIsImNvbXBhbnl...</msg>
+<var>${token}</var>
+<arg>${Get_Token_Response.body.result.token}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.615905" elapsed="0.000000"/>
+</kw>
+<kw name="Http" owner="Browser">
+<msg time="2024-09-20T19:42:12.899832" level="INFO">{'status': 400, 'body': {'statusCode': 400, 'message': 'Validation error: "yearsInBusiness" is required, "locations" is required', 'result': {}, 'errorType': 'GLOBAL_ERROR'}, 'headers': {'access-control-allow-origin': '*', 'api-version': 'v2', 'cache-control': 'no-store, no-cache, must-revalidate, private', 'content-length': '146', 'content-type': 'application/json', 'date': 'Fri, 20 Sep 2024 14:12:13 GMT', 'last-modified': 'Thu Sep 19 2024 09:41:33 GMT+0000 (Coordinated Universal Time)', 'ratelimit': 'limit=300, remaining=299, reset=269', 'ratelimit-policy': '300;w=300', 'server': 'nginx', 'vary': 'Accept-Encoding', 'x-powered-by': 'Express'}, 'type': 'basic', 'statusText': '', 'url': 'https://uat-api.squarerisk.net/api/v2/partner/application/initiate', 'ok': False, 'redirected': False}</msg>
+<msg time="2024-09-20T19:42:12.899832" level="INFO">${Intiate_Application_Response} = {'status': 400, 'body': {'statusCode': 400, 'message': 'Validation error: "yearsInBusiness" is required, "locations" is required', 'result': {}, 'errorType': 'GLOBAL_ERROR'}, 'headers': {'access-contr...</msg>
+<var>${Intiate_Application_Response}</var>
+<arg>${Initiate_Application_API}</arg>
+<arg>POST</arg>
+<arg>{"agentEmail": "abc@partnertestagency1.com","agencyName": "Partner Test Agency1","productName": "WORKERS_COMPENSATION","state": "MA","naicsCode": "457210","addressLine1": "179 Tremont St","zip": "02769","city": "Rehoboth","county": "CA","businessName": "agaro","payrollInformation": [{"classCodeWC": "7219","payrollAmount": "5000"},{"classCodeWC": "8350","payrollAmount": "5000"}],"limits": "100/100/1000"}</arg>
+<arg>headers={"Authorization": "Bearer ${token}", "x-api-key": "${Api_Key}"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="PASS" start="2024-09-20T19:42:12.615905" elapsed="0.283927"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.899832" level="INFO">400</msg>
+<arg>${Intiate_Application_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.899832" level="INFO">{'statusCode': 400, 'message': 'Validation error: "yearsInBusiness" is required, "locations" is required', 'result': {}, 'errorType': 'GLOBAL_ERROR'}</msg>
+<arg>${Intiate_Application_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Validate Initate/Update Application Response">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.899832" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-09-20T19:42:12.899832" level="FAIL">400 != 200</msg>
+<arg>${Intiate_Application_Response.body.statusCode}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2024-09-20T19:42:12.899832" elapsed="0.000000">400 != 200</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.message}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.applicationLink}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].premiumAmount}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].status}</arg>
+<arg>Success</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].carrierName}</arg>
+<arg>SquareRisk</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].errorResponse}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].premiumAmount}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].status}</arg>
+<arg>Fail</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].carrierName}</arg>
+<arg>SquareRisk</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].errorResponse}</arg>
+<arg>['Industry is not available with selected product']</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<arg>${Intiate_Application_Response}</arg>
+<status status="FAIL" start="2024-09-20T19:42:12.899832" elapsed="0.000000">400 != 200</status>
+</kw>
+<status status="FAIL" start="2024-09-20T19:42:12.899832" elapsed="0.000000">400 != 200</status>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.899832" level="INFO">API Response is not matchingmessage</msg>
+<arg>API Response is not matchingmessage</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</try>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-20T19:42:12.899832" level="FAIL">Resolving variable '${Intiate_Application_Response.body.result.applicationId}' failed: AttributeError: applicationId</msg>
+<var>${Application_ID}</var>
+<arg>${Intiate_Application_Response.body.result.applicationId}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="FAIL" start="2024-09-20T19:42:12.899832" elapsed="0.000000">Resolving variable '${Intiate_Application_Response.body.result.applicationId}' failed: AttributeError: applicationId</status>
+</kw>
+<kw name="Http" owner="Browser">
+<var>${Get_Application_Response}</var>
+<arg>${Get_Application_API}?applicationId=${ApplicationID}</arg>
+<arg>GET</arg>
+<arg>headers={"Authorization": "Bearer ${token}", "x-api-key": "${Api_Key}"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Get_Application_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Get_Application_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Get Application Response">
+<arg>${Get_Application_Response}</arg>
+<status status="NOT RUN" start="2024-09-20T19:42:12.899832" elapsed="0.000000"/>
+</kw>
+<kw name="Http" owner="Browser">
+<var>${Update_Application_Response}</var>
+<arg>${Update_Application_API}</arg>
+<arg>POST</arg>
+<arg>{"applicationId": "${ApplicationID}","agentEmail": "abc@partnertestagency1.com","agencyName": "Partner Test Agency1","productName": "WORKERS_COMPENSATION","state": "MA","naicsCode": "457210","addressLine1": "179 Tremont St","zip": "02769","city": "Rehoboth","county": "CA","businessName": "agaro","payrollInformation": [{"classCodeWC": "7219","payrollAmount": "15000"},{"classCodeWC": "8350","payrollAmount": "25000"}],"limits": "100/100/1000"}</arg>
+<arg>headers={"Authorization": "Bearer ${token}", "x-api-key": "${Api_Key}"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Update_Application_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Update_Application_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Validate Initate/Update Application Response">
+<arg>${Update_Application_Response}</arg>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log" owner="BuiltIn">
+<arg>API Response is not matchingmessage</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</try>
+<kw name="Http" owner="Browser">
+<var>${Get_Application_Response}</var>
+<arg>${Get_Application_API}?applicationId=${ApplicationID}</arg>
+<arg>GET</arg>
+<arg>headers={"Authorization": "Bearer ${token}", "x-api-key": "${Api_Key}"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Get_Application_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Get_Application_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Validate Initate/Update Application Response">
+<arg>${Get_Application_Response}</arg>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log" owner="BuiltIn">
+<arg>API Response is not matchingmessage</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</try>
+<kw name="Close Browser" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:12.915300" elapsed="0.000000"/>
+</kw>
+<tag>Test1</tag>
+<status status="FAIL" start="2024-09-20T19:42:10.911918" elapsed="2.003382">Resolving variable '${Intiate_Application_Response.body.result.applicationId}' failed: AttributeError: applicationId</status>
+</test>
+<test id="s1-t2" name="Create application through Partner API by providing Primary Class Code" line="107">
+<kw name="Open the browser" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-09-20T19:42:12.967593" level="INFO">Switching browser to browser=20ee7765-316c-41ac-88db-1da92197bd73</msg>
+<msg time="2024-09-20T19:42:12.967593" level="INFO">Successfully changed active browser: browser=20ee7765-316c-41ac-88db-1da92197bd73</msg>
+<msg time="2024-09-20T19:42:12.967593" level="INFO">Reusing existing browser with id: browser=20ee7765-316c-41ac-88db-1da92197bd73</msg>
+<arg>headless=true</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.967593" elapsed="0.000000"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-09-20T19:42:13.877321" level="INFO">Successfully initialized new page object and opened url: https://uat-api.squarerisk.net</msg>
+<msg time="2024-09-20T19:42:13.877321" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-09-20T19:42:12.967593" elapsed="0.909728"/>
+</kw>
+<status status="PASS" start="2024-09-20T19:42:12.967593" elapsed="0.909728"/>
+</kw>
+<kw name="Http" owner="Browser">
+<msg time="2024-09-20T19:42:14.301818" level="INFO">{'status': 200, 'body': {'statusCode': 200, 'message': 'Operation successful', 'result': {'email': 'abc@partnertestagency1.com', 'parentCompany': {'businessType': 'REFERRAL', 'name': 'PartnerAPI', 'companyId': 794}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNSwiZW1haWwiOiJhYmNAcGFydG5lcnRlc3RhZ2VuY3kxLmNvbSIsInBhcmVudENvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiUkVGRVJSQUwiLCJuYW1lIjoiUGFydG5lckFQSSIsImNvbXBhbnlJZCI6Nzk0fSwicGxhdGZvcm1EYXRhIjp7ImFwaUtleSI6IjQ3NTA0M2QwLWUxZWEtNGI4YS05YjM3LTExZWFlMThhYmQ3NiIsIndlYkhvb2tVcmwiOm51bGx9LCJyb2xlIjp7Im5hbWUiOiJBZ2VuY3kgYWRtaW4iLCJzbHVnIjoiQUdFTkNZX0FETUlOIn0sImNvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiQUdFTkNZIiwibmFtZSI6IlBhcnRuZXIgVGVzdCBBZ2VuY3kxIiwiY29tcGFueUlkIjo4MDJ9LCJpYXQiOjE3MjY4NDE1MzUsImV4cCI6MTcyNjkyNzkzNX0.o3yZf7bl42nmMKEZ2Vq4bsekw4p2VCI1CuUn_x106KA'}}, 'headers': {'access-control-allow-origin': '*', 'api-version': 'v2', 'cache-control': 'no-store, no-cache, must-revalidate, private', 'content-length': '782', 'content-type': 'application/json', 'date': 'Fri, 20 Sep 2024 14:12:15 GMT', 'last-modified': 'Thu Sep 19 2024 09:41:33 GMT+0000 (Coordinated Universal Time)', 'ratelimit': 'limit=300, remaining=298, reset=268', 'ratelimit-policy': '300;w=300', 'server': 'nginx', 'vary': 'Accept-Encoding', 'x-powered-by': 'Express'}, 'type': 'basic', 'statusText': '', 'url': 'https://uat-api.squarerisk.net/api/v2/partner/auth/token', 'ok': True, 'redirected': False}</msg>
+<msg time="2024-09-20T19:42:14.301818" level="INFO">${Get_Token_Response} = {'status': 200, 'body': {'statusCode': 200, 'message': 'Operation successful', 'result': {'email': 'abc@partnertestagency1.com', 'parentCompany': {'businessType': 'REFERRAL', 'name': 'PartnerAPI', 'co...</msg>
+<var>${Get_Token_Response}</var>
+<arg>${Get_Token_API}</arg>
+<arg>POST</arg>
+<arg>{"apiKey":"${Api_Key}", "slug":"PARTNERAPI_REFERRAL", "partnerEmail":"abc@partnertestagency1.com", "partnerName": "Partner Test Agency1"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="PASS" start="2024-09-20T19:42:13.878273" elapsed="0.423545"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:14.301818" level="INFO">200</msg>
+<arg>${Get_Token_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:14.301818" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:14.301818" level="INFO">{'statusCode': 200, 'message': 'Operation successful', 'result': {'email': 'abc@partnertestagency1.com', 'parentCompany': {'businessType': 'REFERRAL', 'name': 'PartnerAPI', 'companyId': 794}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNSwiZW1haWwiOiJhYmNAcGFydG5lcnRlc3RhZ2VuY3kxLmNvbSIsInBhcmVudENvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiUkVGRVJSQUwiLCJuYW1lIjoiUGFydG5lckFQSSIsImNvbXBhbnlJZCI6Nzk0fSwicGxhdGZvcm1EYXRhIjp7ImFwaUtleSI6IjQ3NTA0M2QwLWUxZWEtNGI4YS05YjM3LTExZWFlMThhYmQ3NiIsIndlYkhvb2tVcmwiOm51bGx9LCJyb2xlIjp7Im5hbWUiOiJBZ2VuY3kgYWRtaW4iLCJzbHVnIjoiQUdFTkNZX0FETUlOIn0sImNvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiQUdFTkNZIiwibmFtZSI6IlBhcnRuZXIgVGVzdCBBZ2VuY3kxIiwiY29tcGFueUlkIjo4MDJ9LCJpYXQiOjE3MjY4NDE1MzUsImV4cCI6MTcyNjkyNzkzNX0.o3yZf7bl42nmMKEZ2Vq4bsekw4p2VCI1CuUn_x106KA'}}</msg>
+<arg>${Get_Token_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:14.301818" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-20T19:42:14.301818" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNSwiZW1haWwiOiJhYmNAcGFydG5lcnRlc3RhZ2VuY3kxLmNvbSIsInBhcmVudENvbXBhbnkiOnsiYnVzaW5lc3NUeXBlIjoiUkVGRVJSQUwiLCJuYW1lIjoiUGFydG5lckFQSSIsImNvbXBhbnl...</msg>
+<var>${token}</var>
+<arg>${Get_Token_Response.body.result.token}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-20T19:42:14.301818" elapsed="0.000000"/>
+</kw>
+<kw name="Http" owner="Browser">
+<msg time="2024-09-20T19:42:14.600830" level="INFO">{'status': 400, 'body': {'statusCode': 400, 'message': 'Validation error: "yearsInBusiness" is required, "locations" is required', 'result': {}, 'errorType': 'GLOBAL_ERROR'}, 'headers': {'access-control-allow-origin': '*', 'api-version': 'v2', 'cache-control': 'no-store, no-cache, must-revalidate, private', 'content-length': '146', 'content-type': 'application/json', 'date': 'Fri, 20 Sep 2024 14:12:15 GMT', 'last-modified': 'Thu Sep 19 2024 09:41:33 GMT+0000 (Coordinated Universal Time)', 'ratelimit': 'limit=300, remaining=298, reset=267', 'ratelimit-policy': '300;w=300', 'server': 'nginx', 'vary': 'Accept-Encoding', 'x-powered-by': 'Express'}, 'type': 'basic', 'statusText': '', 'url': 'https://uat-api.squarerisk.net/api/v2/partner/application/initiate', 'ok': False, 'redirected': False}</msg>
+<msg time="2024-09-20T19:42:14.600830" level="INFO">${Intiate_Application_Response} = {'status': 400, 'body': {'statusCode': 400, 'message': 'Validation error: "yearsInBusiness" is required, "locations" is required', 'result': {}, 'errorType': 'GLOBAL_ERROR'}, 'headers': {'access-contr...</msg>
+<var>${Intiate_Application_Response}</var>
+<arg>${Initiate_Application_API}</arg>
+<arg>POST</arg>
+<arg>{"agentEmail": "abc@partnertestagency1.com","agencyName": "Partner Test Agency1","productName": "WORKERS_COMPENSATION","state": "MA","naicsCode": "457210","addressLine1": "179 Tremont St","zip": "02769","city": "Rehoboth","county": "CA","businessName": "agaro","payrollInformation": [{"classCodeWC": "7219","payrollAmount": "5000"}],"limits": "100/100/1000"}</arg>
+<arg>headers={"Authorization": "Bearer ${token}", "x-api-key": "${Api_Key}"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="PASS" start="2024-09-20T19:42:14.301818" elapsed="0.299012"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:14.600830" level="INFO">400</msg>
+<arg>${Intiate_Application_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-20T19:42:14.600830" level="INFO">{'statusCode': 400, 'message': 'Validation error: "yearsInBusiness" is required, "locations" is required', 'result': {}, 'errorType': 'GLOBAL_ERROR'}</msg>
+<arg>${Intiate_Application_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Initate/Update Application Response">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-09-20T19:42:14.600830" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-09-20T19:42:14.600830" level="FAIL">400 != 200</msg>
+<arg>${Intiate_Application_Response.body.statusCode}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2024-09-20T19:42:14.600830" elapsed="0.000000">400 != 200</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.message}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.applicationLink}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].premiumAmount}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].status}</arg>
+<arg>Success</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].carrierName}</arg>
+<arg>SquareRisk</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[0].errorResponse}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].premiumAmount}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].status}</arg>
+<arg>Fail</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].carrierName}</arg>
+<arg>SquareRisk</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Intiate_Application_Response.body.result.indicationQuotes[1].errorResponse}</arg>
+<arg>['Industry is not available with selected product']</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<arg>${Intiate_Application_Response}</arg>
+<status status="FAIL" start="2024-09-20T19:42:14.600830" elapsed="0.000000">400 != 200</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${Application_ID}</var>
+<arg>${Intiate_Application_Response.body.result.applicationId}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Http" owner="Browser">
+<var>${Get_Application_Response}</var>
+<arg>${Get_Application_API}?applicationId=${ApplicationID}</arg>
+<arg>GET</arg>
+<arg>headers={"Authorization": "Bearer ${token}", "x-api-key": "${Api_Key}"}</arg>
+<tag>HTTP</tag>
+<doc>Performs an HTTP request in the current browser context</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Get_Application_Response.status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${Get_Application_Response.body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Validate Get Application Response">
+<arg>${Get_Application_Response}</arg>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log" owner="BuiltIn">
+<arg>API Response is not matchingmessage</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</try>
+<kw name="Close Browser" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-09-20T19:42:14.600830" elapsed="0.000000"/>
+</kw>
+<tag>Test2</tag>
+<status status="FAIL" start="2024-09-20T19:42:12.967593" elapsed="1.633237">400 != 200</status>
+</test>
+<doc>Midwestern Partner API test Cases</doc>
+<status status="FAIL" start="2024-09-20T19:42:10.090807" elapsed="4.561129"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Test1</stat>
+<stat pass="0" fail="1" skip="0">Test2</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Test2-1">Test2-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

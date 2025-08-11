@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3rc3 (Python 3.12.1 on win32)" generated="2025-07-18T20:59:07.383297" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\Tests\testcase.robot">
+<test id="s1-t1" name="Test1" line="270">
+<kw name="Open the Browser" owner="Common" type="SETUP">
+<msg time="2025-07-18T20:59:08.688157" level="TRACE">Arguments: [  ]</msg>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-18T20:59:08.691171" level="TRACE">Arguments: [ browser=&lt;SupportedBrowsers.chromium: 1&gt; | headless=False | args=['--start-maximized'] ]</msg>
+<msg time="2025-07-18T20:59:08.691171" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Softwares\\Pycharm\\RobotFramework\\SR_Automation\\SR_Automation\\Regression Testing\\Tests\\results\\browser\\traces\\temp\\602e7c54-d208-4660-8fe2-7ac86bb2bf97"}</msg>
+<msg time="2025-07-18T20:59:08.733268" level="INFO">Starting Browser process C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:50808</msg>
+<msg time="2025-07-18T20:59:08.733268" level="TRACE">Node startup parameters: ['node', 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '127.0.0.1', '50808']</msg>
+<msg time="2025-07-18T20:59:10.301861" level="TRACE">Connected to the playwright process at 127.0.0.1:50808: body: "OK"
+</msg>
+<msg time="2025-07-18T20:59:10.875423" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Softwares\\Pycharm\\RobotFramework\\SR_Automation\\SR_Automation\\Regression Testing\\Tests\\results\\browser\\traces\\temp\\602e7c54-d208-4660-8fe2-7ac86bb2bf97"}</msg>
+<msg time="2025-07-18T20:59:10.875423" level="TRACE">Return: 'browser=78c1cd79-3183-4b76-9c8f-e509d62dbc3d'</msg>
+<arg>browser=${Browser}</arg>
+<arg>headless=${Headless}</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-18T20:59:08.690163" elapsed="2.185260"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-18T20:59:10.878422" level="TRACE">Arguments: [ viewport=None ]</msg>
+<msg time="2025-07-18T20:59:10.905952" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": null
+}</msg>
+<msg time="2025-07-18T20:59:10.942952" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-18T20:59:10.942952" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': None}</msg>
+<msg time="2025-07-18T20:59:10.942952" level="TRACE">Return: 'context=6b297d48-9391-4a9c-9a02-dce784e7d670'</msg>
+<arg>viewport=${None}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-18T20:59:10.876422" elapsed="0.066530"/>
+</kw>
+<msg time="2025-07-18T20:59:10.943954" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:08.687223" elapsed="2.256731"/>
+</kw>
+<kw name="Given SquareRiskPortal.Navigate to SquareRisk Agent Portal" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:10.948953" level="TRACE">Arguments: [  ]</msg>
+<kw name="Navigate to SquareRisk Agent Login page" owner="SR_Login_Page">
+<msg time="2025-07-18T20:59:10.949954" level="TRACE">Arguments: [  ]</msg>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-18T20:59:10.956954" level="TRACE">Arguments: [ url='https://uat.squarerisk.net/login' ]</msg>
+<msg time="2025-07-18T20:59:14.434692" level="INFO">Successfully initialized new page object and opened url: https://uat.squarerisk.net/login</msg>
+<msg time="2025-07-18T20:59:14.434692" level="DEBUG">Video is not enabled.</msg>
+<msg time="2025-07-18T20:59:14.434692" level="TRACE">Return: {'page_id': 'page=0f820c43-5903-4cb3-b92f-006c462e9a67', 'video_path': ''}</msg>
+<arg>url=${URLs.${ENV}_Agent}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-18T20:59:10.949954" elapsed="3.484738"/>
+</kw>
+<msg time="2025-07-18T20:59:14.435693" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:10.948953" elapsed="3.486740"/>
+</kw>
+<kw name="Verify Page loaded" owner="SR_Login_Page">
+<msg time="2025-07-18T20:59:14.436694" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-18T20:59:14.437694" level="TRACE">Arguments: [ "xpath=//*[name()='svg'][@alt='Square Risk Logo']" ]</msg>
+<msg time="2025-07-18T20:59:15.821758" level="INFO">Waited for Element with selector xpath=//*[name()='svg'][@alt='Square Risk Logo'] at state visible</msg>
+<msg time="2025-07-18T20:59:15.821758" level="TRACE">Return: None</msg>
+<arg>${SR_img}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-18T20:59:14.436694" elapsed="1.385064"/>
+</kw>
+<msg time="2025-07-18T20:59:15.821758" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:14.435693" elapsed="1.386065"/>
+</kw>
+<msg time="2025-07-18T20:59:15.822761" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:10.947954" elapsed="4.874807"/>
+</kw>
+<kw name="When Common.Get Email and Password of" owner="Common">
+<msg time="2025-07-18T20:59:15.824217" level="TRACE">Arguments: [ ${role}='Agent' ]</msg>
+<kw name="Get Credentials" owner="Common">
+<msg time="2025-07-18T20:59:15.825238" level="TRACE">Arguments: [ ${role}='Agent' ]</msg>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.828248" level="TRACE">Arguments: [ "'Agent' == 'Agent'" | 'Get Agent Email' | 'ELSE' | 'Get Admin Email' ]</msg>
+<kw name="Get Agent Email" owner="Common">
+<msg time="2025-07-18T20:59:15.829249" level="TRACE">Arguments: [  ]</msg>
+<if>
+<branch type="IF" condition="'${ENV}' == 'UAT'">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.837246" level="TRACE">Arguments: [ 'uditbhati1305+789@gmail.com' ]</msg>
+<msg time="2025-07-18T20:59:15.837246" level="TRACE">Return: 'uditbhati1305+789@gmail.com'</msg>
+<msg time="2025-07-18T20:59:15.838249" level="INFO">${userID} = uditbhati1305+789@gmail.com</msg>
+<var>${userID}</var>
+<arg>${UserCredentials.agent_email_UAT}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.830249" elapsed="0.008000"/>
+</kw>
+<status status="PASS" start="2025-07-18T20:59:15.830249" elapsed="0.008000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${userID}</var>
+<arg>${UserCredentials.agent_email_DEV}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:15.839248" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:15.838249" elapsed="0.000999"/>
+</branch>
+<status status="PASS" start="2025-07-18T20:59:15.830249" elapsed="0.008999"/>
+</if>
+<return>
+<value>${userID}</value>
+<status status="PASS" start="2025-07-18T20:59:15.839248" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.840247" level="TRACE">Return: 'uditbhati1305+789@gmail.com'</msg>
+<status status="PASS" start="2025-07-18T20:59:15.829249" elapsed="0.010998"/>
+</kw>
+<msg time="2025-07-18T20:59:15.840247" level="TRACE">Return: 'uditbhati1305+789@gmail.com'</msg>
+<msg time="2025-07-18T20:59:15.840247" level="INFO">${email} = uditbhati1305+789@gmail.com</msg>
+<var>${email}</var>
+<arg>'${role}' == 'Agent'</arg>
+<arg>Get Agent Email</arg>
+<arg>ELSE</arg>
+<arg>Get Admin Email</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.827249" elapsed="0.012998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.842251" level="TRACE">Arguments: [ "'Agent' == 'Agent'" | 'Get Agent Password' | 'ELSE' | 'Get Admin Password' ]</msg>
+<kw name="Get Agent Password" owner="Common">
+<msg time="2025-07-18T20:59:15.843265" level="TRACE">Arguments: [  ]</msg>
+<if>
+<branch type="IF" condition="'${ENV}' == 'UAT'">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.850250" level="TRACE">Arguments: [ 'SquareRisk#12' ]</msg>
+<msg time="2025-07-18T20:59:15.850250" level="TRACE">Return: 'SquareRisk#12'</msg>
+<msg time="2025-07-18T20:59:15.850250" level="INFO">${password} = SquareRisk#12</msg>
+<var>${password}</var>
+<arg>${UserCredentials.agent_password_UAT}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.844265" elapsed="0.005985"/>
+</kw>
+<status status="PASS" start="2025-07-18T20:59:15.843265" elapsed="0.006985"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${password}</var>
+<arg>${UserCredentials.agent_password_DEV}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:15.851249" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:15.851249" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-07-18T20:59:15.843265" elapsed="0.007984"/>
+</if>
+<return>
+<value>${password}</value>
+<status status="PASS" start="2025-07-18T20:59:15.851249" elapsed="0.001001"/>
+</return>
+<msg time="2025-07-18T20:59:15.852250" level="TRACE">Return: 'SquareRisk#12'</msg>
+<status status="PASS" start="2025-07-18T20:59:15.842251" elapsed="0.009999"/>
+</kw>
+<msg time="2025-07-18T20:59:15.852250" level="TRACE">Return: 'SquareRisk#12'</msg>
+<msg time="2025-07-18T20:59:15.852250" level="INFO">${password} = SquareRisk#12</msg>
+<var>${password}</var>
+<arg>'${role}' == 'Agent'</arg>
+<arg>Get Agent Password</arg>
+<arg>ELSE</arg>
+<arg>Get Admin Password</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.841252" elapsed="0.010998"/>
+</kw>
+<return>
+<value>${email}</value>
+<value>${password}</value>
+<status status="PASS" start="2025-07-18T20:59:15.852250" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.852250" level="TRACE">Return: ['uditbhati1305+789@gmail.com', 'SquareRisk#12']</msg>
+<msg time="2025-07-18T20:59:15.852250" level="INFO">${email} = uditbhati1305+789@gmail.com</msg>
+<msg time="2025-07-18T20:59:15.853247" level="INFO">${password} = SquareRisk#12</msg>
+<var>${email}</var>
+<var>${password}</var>
+<arg>${role}</arg>
+<status status="PASS" start="2025-07-18T20:59:15.824217" elapsed="0.029030"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.853247" level="TRACE">Arguments: [ '${email}' ]</msg>
+<msg time="2025-07-18T20:59:15.853247" level="INFO">${email} = uditbhati1305+789@gmail.com</msg>
+<msg time="2025-07-18T20:59:15.853247" level="TRACE">Return: None</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.853247" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.854255" level="TRACE">Arguments: [ '${password}' ]</msg>
+<msg time="2025-07-18T20:59:15.854255" level="INFO">${password} = SquareRisk#12</msg>
+<msg time="2025-07-18T20:59:15.854255" level="TRACE">Return: None</msg>
+<arg>${password}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.853247" elapsed="0.001008"/>
+</kw>
+<msg time="2025-07-18T20:59:15.854255" level="TRACE">Return: None</msg>
+<arg>Agent</arg>
+<status status="PASS" start="2025-07-18T20:59:15.822761" elapsed="0.031494"/>
+</kw>
+<kw name="And Common.Get Dummy Data" owner="Common">
+<msg time="2025-07-18T20:59:15.856249" level="TRACE">Arguments: [ ${state}='MA' ]</msg>
+<kw name="Get Current Date" owner="Common">
+<msg time="2025-07-18T20:59:15.857249" level="TRACE">Arguments: [  ]</msg>
+<kw name="Get Current Day" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.858249" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-18T20:59:15.859247" level="INFO">Next Date is: 07/18/2025</msg>
+<msg time="2025-07-18T20:59:15.859247" level="TRACE">Return: '07/18/2025'</msg>
+<msg time="2025-07-18T20:59:15.860253" level="INFO">${current_day_date} = 07/18/2025</msg>
+<var>${current_day_date}</var>
+<doc>Get the current day's date in MM/DD/YYYY format.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.857249" elapsed="0.003004"/>
+</kw>
+<return>
+<value>${current_day_date}</value>
+<status status="PASS" start="2025-07-18T20:59:15.860253" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.860253" level="TRACE">Return: '07/18/2025'</msg>
+<msg time="2025-07-18T20:59:15.860253" level="INFO">${Today's_Date} = 07/18/2025</msg>
+<var>${Today's_Date}</var>
+<status status="PASS" start="2025-07-18T20:59:15.857249" elapsed="0.003004"/>
+</kw>
+<kw name="Get Next Date" owner="Common">
+<msg time="2025-07-18T20:59:15.861250" level="TRACE">Arguments: [  ]</msg>
+<kw name="Get Next Day" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.861250" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-18T20:59:15.861250" level="INFO">Next Date is: 07/19/2025</msg>
+<msg time="2025-07-18T20:59:15.861250" level="TRACE">Return: '07/19/2025'</msg>
+<msg time="2025-07-18T20:59:15.862250" level="INFO">${next_day_date} = 07/19/2025</msg>
+<var>${next_day_date}</var>
+<doc>Get the next day's date in MM/DD/YYYY format.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.861250" elapsed="0.001000"/>
+</kw>
+<return>
+<value>${next_day_date}</value>
+<status status="PASS" start="2025-07-18T20:59:15.862250" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.862250" level="TRACE">Return: '07/19/2025'</msg>
+<msg time="2025-07-18T20:59:15.862250" level="INFO">${Tommorrow's_Date} = 07/19/2025</msg>
+<var>${Tommorrow's_Date}</var>
+<status status="PASS" start="2025-07-18T20:59:15.861250" elapsed="0.001000"/>
+</kw>
+<kw name="Get Random Company Name" owner="Common">
+<msg time="2025-07-18T20:59:15.863245" level="TRACE">Arguments: [  ]</msg>
+<kw name="Generate Random Company Name" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.863245" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-18T20:59:15.864246" level="INFO">Generated fake Company Name: Stevenson-Hamilton</msg>
+<msg time="2025-07-18T20:59:15.864246" level="TRACE">Return: 'Stevenson-Hamilton'</msg>
+<msg time="2025-07-18T20:59:15.864246" level="INFO">${company_name} = Stevenson-Hamilton</msg>
+<var>${company_name}</var>
+<doc>Generates a fake Company Name.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.863245" elapsed="0.001001"/>
+</kw>
+<return>
+<value>${company_name}</value>
+<status status="PASS" start="2025-07-18T20:59:15.864246" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.864246" level="TRACE">Return: 'Stevenson-Hamilton'</msg>
+<msg time="2025-07-18T20:59:15.864246" level="INFO">${Comp_Name} = Stevenson-Hamilton</msg>
+<var>${Comp_Name}</var>
+<status status="PASS" start="2025-07-18T20:59:15.862250" elapsed="0.001996"/>
+</kw>
+<kw name="Get Random Address String By State" owner="Common">
+<msg time="2025-07-18T20:59:15.866248" level="TRACE">Arguments: [ ${state}='MA' ]</msg>
+<kw name="Generate Random Us Address String By State" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.867248" level="TRACE">Arguments: [ 'MA' ]</msg>
+<msg time="2025-07-18T20:59:15.901252" level="INFO">Generated fake US address: 9 Pierce Road, , Watertown, MA, 02472</msg>
+<msg time="2025-07-18T20:59:15.901252" level="TRACE">Return: '9 Pierce Road, , Watertown, MA, 02472'</msg>
+<msg time="2025-07-18T20:59:15.901252" level="INFO">${address} = 9 Pierce Road, , Watertown, MA, 02472</msg>
+<var>${address}</var>
+<arg>${state}</arg>
+<doc>Generates a fake US address.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.866248" elapsed="0.035004"/>
+</kw>
+<return>
+<value>${address}</value>
+<status status="PASS" start="2025-07-18T20:59:15.902253" elapsed="0.001001"/>
+</return>
+<msg time="2025-07-18T20:59:15.903254" level="TRACE">Return: '9 Pierce Road, , Watertown, MA, 02472'</msg>
+<msg time="2025-07-18T20:59:15.903254" level="INFO">${Google_Addr} = 9 Pierce Road, , Watertown, MA, 02472</msg>
+<var>${Google_Addr}</var>
+<arg>${state}</arg>
+<status status="PASS" start="2025-07-18T20:59:15.865247" elapsed="0.038007"/>
+</kw>
+<kw name="Get Random Address by State" owner="Common">
+<msg time="2025-07-18T20:59:15.905256" level="TRACE">Arguments: [ ${state}='MA' ]</msg>
+<kw name="Generate Random Us Address By State" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.906258" level="TRACE">Arguments: [ 'MA' ]</msg>
+<msg time="2025-07-18T20:59:15.930773" level="TRACE">Return: ('11 Proctor Circle', '', 'Peabody', 'MA', '01960')</msg>
+<msg time="2025-07-18T20:59:15.930773" level="INFO">${address1} = 11 Proctor Circle</msg>
+<msg time="2025-07-18T20:59:15.930773" level="INFO">${address2} = </msg>
+<msg time="2025-07-18T20:59:15.930773" level="INFO">${city} = Peabody</msg>
+<msg time="2025-07-18T20:59:15.930773" level="INFO">${state} = MA</msg>
+<msg time="2025-07-18T20:59:15.930773" level="INFO">${postal_code} = 01960</msg>
+<var>${address1}</var>
+<var>${address2}</var>
+<var>${city}</var>
+<var>${state}</var>
+<var>${postal_code}</var>
+<arg>${state}</arg>
+<doc>Generate a fake US address</doc>
+<status status="PASS" start="2025-07-18T20:59:15.905256" elapsed="0.025517"/>
+</kw>
+<return>
+<value>${address1}</value>
+<value>${address2}</value>
+<value>${city}</value>
+<value>${state}</value>
+<value>${postal_code}</value>
+<status status="PASS" start="2025-07-18T20:59:15.931775" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.931775" level="TRACE">Return: ['11 Proctor Circle', '', 'Peabody', 'MA', '01960']</msg>
+<msg time="2025-07-18T20:59:15.932775" level="INFO">${address1} = 11 Proctor Circle</msg>
+<msg time="2025-07-18T20:59:15.932775" level="INFO">${address2} = </msg>
+<msg time="2025-07-18T20:59:15.932775" level="INFO">${city} = Peabody</msg>
+<msg time="2025-07-18T20:59:15.932775" level="INFO">${state} = MA</msg>
+<msg time="2025-07-18T20:59:15.932775" level="INFO">${postal_code} = 01960</msg>
+<var>${address1}</var>
+<var>${address2}</var>
+<var>${city}</var>
+<var>${state}</var>
+<var>${postal_code}</var>
+<arg>${state}</arg>
+<status status="PASS" start="2025-07-18T20:59:15.904255" elapsed="0.028520"/>
+</kw>
+<kw name="Get Fake First &amp; Last Name" owner="Common">
+<msg time="2025-07-18T20:59:15.933773" level="TRACE">Arguments: [  ]</msg>
+<kw name="Generate Fake First And Last Name" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.934778" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-18T20:59:15.935776" level="TRACE">Return: ('Erik', 'Martin')</msg>
+<msg time="2025-07-18T20:59:15.935776" level="INFO">${First_name} = Erik</msg>
+<msg time="2025-07-18T20:59:15.935776" level="INFO">${Last_Name} = Martin</msg>
+<var>${First_name}</var>
+<var>${Last_Name}</var>
+<status status="PASS" start="2025-07-18T20:59:15.934778" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${First_name}</value>
+<value>${Last_Name}</value>
+<status status="PASS" start="2025-07-18T20:59:15.935776" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.936776" level="TRACE">Return: ['Erik', 'Martin']</msg>
+<msg time="2025-07-18T20:59:15.936776" level="INFO">${fname} = Erik</msg>
+<msg time="2025-07-18T20:59:15.936776" level="INFO">${lname} = Martin</msg>
+<var>${fname}</var>
+<var>${lname}</var>
+<status status="PASS" start="2025-07-18T20:59:15.933773" elapsed="0.003003"/>
+</kw>
+<kw name="Get Bank Routing Number" owner="Common">
+<msg time="2025-07-18T20:59:15.937776" level="TRACE">Arguments: [  ]</msg>
+<kw name="Generate Bank Routing Number" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.938776" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-18T20:59:15.938776" level="TRACE">Return: '089206375'</msg>
+<msg time="2025-07-18T20:59:15.938776" level="INFO">${bank_routing_number} = 089206375</msg>
+<var>${bank_routing_number}</var>
+<status status="PASS" start="2025-07-18T20:59:15.937776" elapsed="0.001000"/>
+</kw>
+<return>
+<value>${bank_routing_number}</value>
+<status status="PASS" start="2025-07-18T20:59:15.938776" elapsed="0.000000"/>
+</return>
+<msg time="2025-07-18T20:59:15.939776" level="TRACE">Return: '089206375'</msg>
+<msg time="2025-07-18T20:59:15.939776" level="INFO">${Routing_Number} = 089206375</msg>
+<var>${Routing_Number}</var>
+<status status="PASS" start="2025-07-18T20:59:15.936776" elapsed="0.003000"/>
+</kw>
+<kw name="Get Fake Email" owner="Common">
+<msg time="2025-07-18T20:59:15.940778" level="TRACE">Arguments: [  ]</msg>
+<kw name="Generate Fake Email" owner="SrCustomLib">
+<msg time="2025-07-18T20:59:15.940778" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-18T20:59:15.941791" level="TRACE">Return: 'muellerpam@example.org'</msg>
+<msg time="2025-07-18T20:59:15.941791" level="INFO">${Email} = muellerpam@example.org</msg>
+<var>${Email}</var>
+<status status="PASS" start="2025-07-18T20:59:15.940778" elapsed="0.001013"/>
+</kw>
+<return>
+<value>${Email}</value>
+<status status="PASS" start="2025-07-18T20:59:15.941791" elapsed="0.000999"/>
+</return>
+<msg time="2025-07-18T20:59:15.942790" level="TRACE">Return: 'muellerpam@example.org'</msg>
+<msg time="2025-07-18T20:59:15.942790" level="INFO">${Email_Addr} = muellerpam@example.org</msg>
+<var>${Email_Addr}</var>
+<status status="PASS" start="2025-07-18T20:59:15.939776" elapsed="0.003014"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.943790" level="TRACE">Arguments: [ '${Effective_Date_Today}' | "${Today's_Date}" ]</msg>
+<msg time="2025-07-18T20:59:15.951693" level="INFO">${Effective_Date_Today} = 07/18/2025</msg>
+<msg time="2025-07-18T20:59:15.951693" level="TRACE">Return: None</msg>
+<arg>${Effective_Date_Today}</arg>
+<arg>${Today's_Date}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.942790" elapsed="0.008903"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.952715" level="TRACE">Arguments: [ '${Effective_Date_Tomorrow}' | "${Tommorrow's_Date}" ]</msg>
+<msg time="2025-07-18T20:59:15.959251" level="INFO">${Effective_Date_Tomorrow} = 07/19/2025</msg>
+<msg time="2025-07-18T20:59:15.959251" level="TRACE">Return: None</msg>
+<arg>${Effective_Date_Tomorrow}</arg>
+<arg>${Tommorrow's_Date}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.951693" elapsed="0.007558"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.960251" level="TRACE">Arguments: [ '${Company_name}' | '${Comp_Name}' ]</msg>
+<msg time="2025-07-18T20:59:15.967495" level="INFO">${Company_name} = Stevenson-Hamilton</msg>
+<msg time="2025-07-18T20:59:15.967495" level="TRACE">Return: None</msg>
+<arg>${Company_name}</arg>
+<arg>${Comp_Name}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.959251" elapsed="0.009557"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.968808" level="TRACE">Arguments: [ '${Google_Address}' | '${Google_Addr}' ]</msg>
+<msg time="2025-07-18T20:59:15.978818" level="INFO">${Google_Address} = 9 Pierce Road, , Watertown, MA, 02472</msg>
+<msg time="2025-07-18T20:59:15.978818" level="TRACE">Return: None</msg>
+<arg>${Google_Address}</arg>
+<arg>${Google_Addr}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.968808" elapsed="0.010010"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.979832" level="TRACE">Arguments: [ '${AddrL1}' | '${address1}' ]</msg>
+<msg time="2025-07-18T20:59:15.987818" level="INFO">${AddrL1} = 11 Proctor Circle</msg>
+<msg time="2025-07-18T20:59:15.987818" level="TRACE">Return: None</msg>
+<arg>${AddrL1}</arg>
+<arg>${address1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.979832" elapsed="0.007986"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.988818" level="TRACE">Arguments: [ '${AddrL2}' | '${address2}' ]</msg>
+<msg time="2025-07-18T20:59:15.996828" level="INFO">${AddrL2} = </msg>
+<msg time="2025-07-18T20:59:15.996828" level="TRACE">Return: None</msg>
+<arg>${AddrL2}</arg>
+<arg>${address2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.988818" elapsed="0.008010"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.996828" level="TRACE">Arguments: [ '${City}' | '${city}' ]</msg>
+<msg time="2025-07-18T20:59:15.997829" level="INFO">${City} = Peabody</msg>
+<msg time="2025-07-18T20:59:15.997829" level="TRACE">Return: None</msg>
+<arg>${City}</arg>
+<arg>${city}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.996828" elapsed="0.001001"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.997829" level="TRACE">Arguments: [ '${State}' | '${state}' ]</msg>
+<msg time="2025-07-18T20:59:15.998829" level="INFO">${State} = MA</msg>
+<msg time="2025-07-18T20:59:15.998829" level="TRACE">Return: None</msg>
+<arg>${State}</arg>
+<arg>${state}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.997829" elapsed="0.001000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:15.998829" level="TRACE">Arguments: [ '${Zip}' | '${postal_code}' ]</msg>
+<msg time="2025-07-18T20:59:16.003825" level="INFO">${Zip} = 01960</msg>
+<msg time="2025-07-18T20:59:16.003825" level="TRACE">Return: None</msg>
+<arg>${Zip}</arg>
+<arg>${postal_code}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:15.998829" elapsed="0.004996"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:16.003825" level="TRACE">Arguments: [ '${First_name}' | '${fname}' ]</msg>
+<msg time="2025-07-18T20:59:16.011493" level="INFO">${First_name} = Erik</msg>
+<msg time="2025-07-18T20:59:16.011493" level="TRACE">Return: None</msg>
+<arg>${First_name}</arg>
+<arg>${fname}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.003825" elapsed="0.008656"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:16.012481" level="TRACE">Arguments: [ '${Last_Name}' | '${lname}' ]</msg>
+<msg time="2025-07-18T20:59:16.019490" level="INFO">${Last_Name} = Martin</msg>
+<msg time="2025-07-18T20:59:16.019490" level="TRACE">Return: None</msg>
+<arg>${Last_Name}</arg>
+<arg>${lname}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.012481" elapsed="0.007009"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:16.020490" level="TRACE">Arguments: [ '${Bank_Route_Number}' | '${Routing_Number}' ]</msg>
+<msg time="2025-07-18T20:59:16.026496" level="INFO">${Bank_Route_Number} = 089206375</msg>
+<msg time="2025-07-18T20:59:16.026496" level="TRACE">Return: None</msg>
+<arg>${Bank_Route_Number}</arg>
+<arg>${Routing_Number}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.020490" elapsed="0.006006"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:16.027493" level="TRACE">Arguments: [ '${Email_Address}' | '${Email_Addr}' ]</msg>
+<msg time="2025-07-18T20:59:16.032491" level="INFO">${Email_Address} = muellerpam@example.org</msg>
+<msg time="2025-07-18T20:59:16.032491" level="TRACE">Return: None</msg>
+<arg>${Email_Address}</arg>
+<arg>${Email_Addr}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.027493" elapsed="0.004998"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-18T20:59:16.033496" level="TRACE">Arguments: [ '${State_Abbr}' | '${US_States.${state}}' ]</msg>
+<msg time="2025-07-18T20:59:16.041657" level="INFO">${State_Abbr} = Massachusetts</msg>
+<msg time="2025-07-18T20:59:16.042668" level="TRACE">Return: None</msg>
+<arg>${State_Abbr}</arg>
+<arg>${US_States.${state}}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.032491" elapsed="0.010177"/>
+</kw>
+<msg time="2025-07-18T20:59:16.042668" level="TRACE">Return: None</msg>
+<arg>MA</arg>
+<status status="PASS" start="2025-07-18T20:59:15.855246" elapsed="0.187422"/>
+</kw>
+<kw name="Then SquareRiskPortal.Perform Login by providing Email &amp; Password" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:16.043665" level="TRACE">Arguments: [ ${email}='uditbhati1305+789@gmail.com' | ${Password}='SquareRisk#12' ]</msg>
+<kw name="Provide Email ID into the &quot;Email&quot; field" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:16.044668" level="TRACE">Arguments: [ ${email}='uditbhati1305+789@gmail.com' ]</msg>
+<kw name="Input Email into the Email field" owner="SR_Login_Page">
+<msg time="2025-07-18T20:59:16.045661" level="TRACE">Arguments: [ ${email}='uditbhati1305+789@gmail.com' ]</msg>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-18T20:59:16.046937" level="TRACE">Arguments: [ 'css=input[name="email"]' ]</msg>
+<msg time="2025-07-18T20:59:16.063318" level="INFO">Waited for Element with selector css=input[name="email"] at state visible</msg>
+<msg time="2025-07-18T20:59:16.063318" level="TRACE">Return: None</msg>
+<arg>${Email_CSSID}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.045661" elapsed="0.017657"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-18T20:59:16.064309" level="TRACE">Arguments: [ "xpath=//input[@name='email']" | 'uditbhati1305+789@gmail.com' ]</msg>
+<msg time="2025-07-18T20:59:16.065311" level="INFO">Fills the text 'uditbhati1305+789@gmail.com' in the given field.</msg>
+<msg time="2025-07-18T20:59:16.097328" level="DEBUG">Fill text uditbhati1305+789@gmail.com on xpath=//input[@name='email'] with force: false</msg>
+<msg time="2025-07-18T20:59:16.098319" level="TRACE">Return: None</msg>
+<arg>${Email_Id}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.064309" elapsed="0.034010"/>
+</kw>
+<msg time="2025-07-18T20:59:16.099321" level="TRACE">Return: None</msg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-07-18T20:59:16.044668" elapsed="0.054653"/>
+</kw>
+<msg time="2025-07-18T20:59:16.099321" level="TRACE">Return: None</msg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-07-18T20:59:16.044668" elapsed="0.054653"/>
+</kw>
+<kw name="Provide Password into the &quot;Password&quot; field" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:16.102320" level="TRACE">Arguments: [ ${Password}='SquareRisk#12' ]</msg>
+<kw name="Input Password into the Password field" owner="SR_Login_Page">
+<msg time="2025-07-18T20:59:16.104746" level="TRACE">Arguments: [ ${password}='SquareRisk#12' ]</msg>
+<kw name="Fill Secret" owner="Browser">
+<arg>${password_Id}</arg>
+<arg>$password</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Fills the given secret from ``variable_name`` into the
+text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.104746" elapsed="0.047565"/>
+</kw>
+<msg time="2025-07-18T20:59:16.152311" level="TRACE">Return: None</msg>
+<arg>${Password}</arg>
+<status status="PASS" start="2025-07-18T20:59:16.103319" elapsed="0.048992"/>
+</kw>
+<msg time="2025-07-18T20:59:16.152311" level="TRACE">Return: None</msg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-07-18T20:59:16.101319" elapsed="0.050992"/>
+</kw>
+<msg time="2025-07-18T20:59:16.153314" level="TRACE">Return: None</msg>
+<arg>${email}</arg>
+<arg>${Password}</arg>
+<status status="PASS" start="2025-07-18T20:59:16.043665" elapsed="0.109649"/>
+</kw>
+<kw name="And SquareRiskPortal.Click &quot;Login&quot; Button and Verify the user navigated the Home Page" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:16.154309" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click on &quot;Login&quot; Button" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:16.156308" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click on Sign In Button" owner="SR_Login_Page">
+<msg time="2025-07-18T20:59:16.157311" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-18T20:59:16.159309" level="TRACE">Arguments: [ "xpath=//button[normalize-space()='Sign In']" ]</msg>
+<msg time="2025-07-18T20:59:16.160309" level="INFO">Clicks the element 'xpath=//button[normalize-space()='Sign In']'.</msg>
+<msg time="2025-07-18T20:59:16.161318" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg time="2025-07-18T20:59:16.293632" level="DEBUG">Clicked element: 'xpath=//button[normalize-space()='Sign In']' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg time="2025-07-18T20:59:16.294633" level="TRACE">Return: None</msg>
+<arg>${signIn_Button_Id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.157311" elapsed="0.137322"/>
+</kw>
+<msg time="2025-07-18T20:59:16.294633" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:16.156308" elapsed="0.138325"/>
+</kw>
+<msg time="2025-07-18T20:59:16.294633" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:16.155309" elapsed="0.139324"/>
+</kw>
+<kw name="Verify User Login" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:16.296628" level="TRACE">Arguments: [  ]</msg>
+<kw name="Verify Home Page" owner="Home_Page">
+<msg time="2025-07-18T20:59:16.297629" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-18T20:59:16.299628" level="TRACE">Arguments: [ "xpath=//li[@data-qa='squarerisk-user-profile']" ]</msg>
+<msg time="2025-07-18T20:59:18.187202" level="INFO">Waited for Element with selector xpath=//li[@data-qa='squarerisk-user-profile'] at state visible</msg>
+<msg time="2025-07-18T20:59:18.188200" level="TRACE">Return: None</msg>
+<arg>${Profile_Page_IMG}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-18T20:59:16.297629" elapsed="1.890571"/>
+</kw>
+<msg time="2025-07-18T20:59:18.188200" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:16.296628" elapsed="1.891572"/>
+</kw>
+<msg time="2025-07-18T20:59:18.188200" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:16.295631" elapsed="1.892569"/>
+</kw>
+<msg time="2025-07-18T20:59:18.188200" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:16.154309" elapsed="2.033891"/>
+</kw>
+<kw name="And SquareRiskPortal.Click on &quot;Add New&quot; Button and verify Select Industry Page" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:18.189203" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click on Add New Button to Initiate a New Application" owner="SquareRiskPortal">
+<msg time="2025-07-18T20:59:18.190202" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click on Add New Button" owner="Home_Page">
+<msg time="2025-07-18T20:59:18.190202" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-18T20:59:18.191281" level="TRACE">Arguments: [ 'xpath=//button[@data-qa="application-add-new"]' | state=&lt;ElementState.enabled: 16&gt; ]</msg>
+<msg time="2025-07-18T20:59:19.101312" level="INFO">Waited for Element with selector xpath=//button[@data-qa="application-add-new"] at state enabled</msg>
+<msg time="2025-07-18T20:59:19.101312" level="TRACE">Return: None</msg>
+<arg>${AddNew_Button}</arg>
+<arg>state=enabled</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-18T20:59:18.190202" elapsed="0.911110"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-18T20:59:19.102328" level="TRACE">Arguments: [ 'xpath=//button[@data-qa="application-add-new"]' ]</msg>
+<msg time="2025-07-18T20:59:19.102328" level="INFO">Clicks the element 'xpath=//button[@data-qa="application-add-new"]'.</msg>
+<msg time="2025-07-18T20:59:19.103316" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg time="2025-07-18T20:59:19.192081" level="DEBUG">Clicked element: 'xpath=//button[@data-qa="application-add-new"]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg time="2025-07-18T20:59:19.193075" level="TRACE">Return: None</msg>
+<arg>${AddNew_Button}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:19.101312" elapsed="0.091763"/>
+</kw>
+<msg time="2025-07-18T20:59:19.193075" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:18.190202" elapsed="1.002873"/>
+</kw>
+<msg time="2025-07-18T20:59:19.193075" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:18.189203" elapsed="1.003872"/>
+</kw>
+<kw name="Verify Select Industry Page Loaded" owner="Start_Application_Resource">
+<msg time="2025-07-18T20:59:19.194074" level="TRACE">Arguments: [  ]</msg>
+<kw name="Verify Page" owner="Select_Industry_Page">
+<msg time="2025-07-18T20:59:19.194074" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait For Condition" owner="Browser">
+<msg time="2025-07-18T20:59:19.195079" level="TRACE">Arguments: [ &lt;ConditionInputs.url: 'get_url'&gt; | 'contains' | 'start-application' ]</msg>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-07-18T20:59:19.196084" level="TRACE">Arguments: [ &lt;AssertionOperator.contains: '*='&gt; | 'start-application' ]</msg>
+<msg time="2025-07-18T20:59:19.199076" level="DEBUG">https://uat.squarerisk.net/start-application</msg>
+<msg time="2025-07-18T20:59:19.199076" level="DEBUG">Assertion polling statistics:
+First element asserted in: 0.0029916763305664062 seconds
+Total tries: 1
+Elapsed time in retries 0.0 seconds</msg>
+<msg time="2025-07-18T20:59:19.199076" level="TRACE">Return: 'https://uat.squarerisk.net/start-application'</msg>
+<arg>contains</arg>
+<arg>start-application</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-07-18T20:59:19.195079" elapsed="0.014578"/>
+</kw>
+<msg time="2025-07-18T20:59:19.209657" level="TRACE">Return: 'https://uat.squarerisk.net/start-application'</msg>
+<arg>Url</arg>
+<arg>contains</arg>
+<arg>start-application</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for a condition, defined with Browser getter keywords to become True.</doc>
+<status status="PASS" start="2025-07-18T20:59:19.194074" elapsed="0.016492"/>
+</kw>
+<msg time="2025-07-18T20:59:19.210566" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:19.194074" elapsed="0.016492"/>
+</kw>
+<msg time="2025-07-18T20:59:19.210566" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:19.193075" elapsed="0.017491"/>
+</kw>
+<msg time="2025-07-18T20:59:19.210566" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:18.189203" elapsed="1.021363"/>
+</kw>
+<kw name="Then Start_Application_Resource.Select Industry &amp; NAICS" owner="Start_Application_Resource">
+<msg time="2025-07-18T20:59:19.211570" level="TRACE">Arguments: [ ${Industry}='Restaurants_Bars_&amp;_Taverns' | ${NAICS_DESC}='Full-Service_Restaurants' ]</msg>
+<kw name="Select Industry from Quick Filters" owner="Start_Application_Resource">
+<msg time="2025-07-18T20:59:19.212566" level="TRACE">Arguments: [ ${Industry}='Restaurants_Bars_&amp;_Taverns' ]</msg>
+<kw name="Select Industry" owner="Select_Industry_Page">
+<msg time="2025-07-18T20:59:19.212566" level="TRACE">Arguments: [ ${Industry}='Restaurants_Bars_&amp;_Taverns' ]</msg>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-18T20:59:19.212566" level="TRACE">Arguments: [ {'Cannabis': "//div[normalize-space()='Cannabis']",
+ 'Contractors': "//div[normalize-space()='Contractors']",
+ 'Real_Estate': "//div[normalize-space()='Real Estate']",
+ 'Restaurants_Bars_&amp;_Taverns': "//div[normalize-space()='Restaurants, Bars, &amp; Taverns']",
+ 'Wholesale': "//div[normalize-space()='Wholesale']",
+ 'Retail': "//div[normalize-space()='Retail']",
+ 'Professional_Services': "//div[normalize-space()='Professional Services']",
+ 'Transportation': "//div[normalize-space()='Transportation']"} | 'Restaurants_Bars_&amp;_Taverns' ]</msg>
+<msg time="2025-07-18T20:59:19.213568" level="TRACE">Return: "//div[normalize-space()='Restaurants, Bars, &amp; Taverns']"</msg>
+<msg time="2025-07-18T20:59:19.213568" level="INFO">${industry_ID} = //div[normalize-space()='Restaurants, Bars, &amp; Taverns']</msg>
+<var>${industry_ID}</var>
+<arg>${Quick_Filters}</arg>
+<arg>${Industry}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-18T20:59:19.212566" elapsed="0.001002"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-18T20:59:19.213568" level="TRACE">Arguments: [ "//div[normalize-space()='Restaurants, Bars, &amp; Taverns']" ]</msg>
+<msg time="2025-07-18T20:59:22.103423" level="INFO">Waited for Element with selector //div[normalize-space()='Restaurants, Bars, &amp; Taverns'] at state visible</msg>
+<msg time="2025-07-18T20:59:22.103423" level="TRACE">Return: None</msg>
+<arg>${industry_ID}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-18T20:59:19.213568" elapsed="2.889855"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-18T20:59:22.105416" level="TRACE">Arguments: [ "//div[normalize-space()='Restaurants, Bars, &amp; Taverns']" ]</msg>
+<msg time="2025-07-18T20:59:22.105416" level="INFO">Clicks the element '//div[normalize-space()='Restaurants, Bars, &amp; Taverns']'.</msg>
+<msg time="2025-07-18T20:59:22.106373" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg time="2025-07-18T20:59:22.186939" level="DEBUG">Clicked element: '//div[normalize-space()='Restaurants, Bars, &amp; Taverns']' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg time="2025-07-18T20:59:22.186939" level="TRACE">Return: None</msg>
+<arg>${industry_ID}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:22.104435" elapsed="0.082504"/>
+</kw>
+<msg time="2025-07-18T20:59:22.186939" level="TRACE">Return: None</msg>
+<arg>${Industry}</arg>
+<doc>Values need to be used:
+*Cannabis*, *Contractors*, *Real_Estate*, *Restaurants_Bars_&amp;_Taverns*, *Wholesale*, *Retail*, *Professional_Services*, &amp; *Transportation*</doc>
+<status status="PASS" start="2025-07-18T20:59:19.212566" elapsed="2.974373"/>
+</kw>
+<msg time="2025-07-18T20:59:22.186939" level="TRACE">Return: None</msg>
+<arg>${Industry}</arg>
+<doc>Values need to be used:
+*Cannabis*, *Contractors*, *Real_Estate*, *Restaurants_Bars_&amp;_Taverns*, *Wholesale*, *Retail*, *Professional_Services*, &amp; *Transportation*</doc>
+<status status="PASS" start="2025-07-18T20:59:19.211570" elapsed="2.975369"/>
+</kw>
+<kw name="Select NAICS from the list of selected Industry" owner="Start_Application_Resource">
+<msg time="2025-07-18T20:59:22.188937" level="TRACE">Arguments: [ ${Industry}='Restaurants_Bars_&amp;_Taverns' | ${NAICS_DESC}='Full-Service_Restaurants' ]</msg>
+<kw name="Select NAICS" owner="Select_Industry_Page">
+<msg time="2025-07-18T20:59:22.189938" level="TRACE">Arguments: [ ${Industry}='Restaurants_Bars_&amp;_Taverns' | ${NAICS_DESC}='Full-Service_Restaurants' ]</msg>
+<if>
+<branch type="IF" condition="'${Industry}' == 'Cannabis'">
+<kw name="Select Cannabis Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*Cannabis_Growing*, \
+*Cannabis_Cultivation*, *Cannabis_Manufacturering*, *Cannabis_Dispensary*, &amp; *Cannabis Delivery*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.190942" elapsed="0.000996"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.189938" elapsed="0.002000"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Contractors'">
+<kw name="Select Contractors Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*Farming_Contractor_&amp;_Crew_Leader*, *Farming_Contractor*, *New_Single-Family_Housing_Construction*, *New_Multifamily_Housing_Construction*, *New_Housing_For-Sale_Builders*, *Commercial_Building_Contruction*, *Water_&amp;_Sewer_Contruction*, *Oil_&amp;_Gas_Pipeline_Construction*, *Power_and_Communication_Line_Construction*, *Highway_Street_and_Bridge_Construction*, *Other_Heavy_and_Civil_Engineering_Construction*, *Poured_Concrete_Foundation_and_Structure_Contractors*, *Structural_Steel_and_Precast_Concrete_Contractors*, *Masonry_Contractors*, *Glass_and_Glazing_Contractors*, *Roofing_Contractors*, *Siding_Contractors*, *Other_Foundation_Structure_and_Building_Exterior_Contractors*, *Electrical_Contractors_and_Other_Wiring_Installation_Contractors*, *Plumbing_&amp;_HVAC_Contractors*, *Other_Building_Equipment_Contractors*, *Drywall_and_Insulation_Contractors*, *Painting_and_Wall_Covering_Contractors*, &amp; *Flooring_Contractors*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.192936" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.191938" elapsed="0.000998"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Real_Estate'">
+<kw name="Select Real Estate Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*New_Single-Family_Housing_Construction*, *New_Multifamily_Housing_Construction*, *New_Housing_For-Sale_Builders*, *Nonresidential_Property_Managers*, *Lessors_of_Nonresidential_Buildings*, *Lessors_of_Miniwarehouses_and_Self-Storage_Units*, *Lessors_of_Other_Real_Estate_Property*, *Residential_Property_Managers*, *Lessors_of_Residential_Buildings_and_Dwellings*, *Other_Services_to_Buildings_and_Dwellings*, *Residential_Remodelers*, &amp; *Industrial_Building_Construction*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.193937" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.192936" elapsed="0.001001"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Restaurants_Bars_&amp;_Taverns'">
+<kw name="Select Restaurant Industry NAICS" owner="Select_Industry_Page">
+<msg time="2025-07-18T20:59:22.195937" level="TRACE">Arguments: [ ${NAICS_DESC}='Full-Service_Restaurants' ]</msg>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-18T20:59:22.196956" level="TRACE">Arguments: [ {'Nonalcoholic_Bars': "//div[normalize-space()='Nonalcoholic Bars']",
+ 'Bars_&amp;_Taverns': "//div[normalize-space()='Bars &amp; Taverns']",
+ 'Breweries': "//div[normalize-space()='Breweries']",
+ 'Full-Service_Restaurants': "//div[normalize-space()='Full-Service Restaurants']",
+ 'Limited-Service_Restaurants': "//div[normalize-space()='Limited-Service Restaurants']",
+ 'Food_Trucks_&amp;_Mobile_Food_Services': "//div[normalize-space()='Food Trucks &amp; Mobile Food Services']"} | 'Full-Service_Restaurants' ]</msg>
+<msg time="2025-07-18T20:59:22.196956" level="TRACE">Return: "//div[normalize-space()='Full-Service Restaurants']"</msg>
+<msg time="2025-07-18T20:59:22.196956" level="INFO">${naics_ID} = //div[normalize-space()='Full-Service Restaurants']</msg>
+<var>${naics_ID}</var>
+<arg>${Restaurants_Bars_&amp;_Taverns_Industries}</arg>
+<arg>${NAICS_DESC}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-18T20:59:22.195937" elapsed="0.001019"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-18T20:59:22.199021" level="TRACE">Arguments: [ "//div[normalize-space()='Full-Service Restaurants']" ]</msg>
+<msg time="2025-07-18T20:59:22.199021" level="INFO">Clicks the element '//div[normalize-space()='Full-Service Restaurants']'.</msg>
+<msg time="2025-07-18T20:59:22.201023" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg time="2025-07-18T20:59:22.274182" level="DEBUG">Clicked element: '//div[normalize-space()='Full-Service Restaurants']' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg time="2025-07-18T20:59:22.274182" level="TRACE">Return: None</msg>
+<arg>${naics_ID}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:22.197954" elapsed="0.077230"/>
+</kw>
+<msg time="2025-07-18T20:59:22.275184" level="TRACE">Return: None</msg>
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*Nonalcoholic_Bars*, *Bars_&amp;_Taverns*, *Breweries*, *Full-Service_Restaurants*, *Limited-Service_Restaurants*, &amp; *Food_Trucks_&amp;_Mobile_Food_Services*</doc>
+<status status="PASS" start="2025-07-18T20:59:22.194938" elapsed="0.080246"/>
+</kw>
+<status status="PASS" start="2025-07-18T20:59:22.194938" elapsed="0.080246"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Wholesale'">
+<kw name="Select Wholesale Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*Alcoholic_Beverage_Wholesalers*, *Home_Furnishing_Wholesalers*, *Furniture_Wholesalers*, *Hardware_Wholesalers*, *Beer_and_Ale_Wholesalers*, *Automobile_Wholesalers*, *Grocery_Wholesalers*, *Industrial_Machinery_and_Equipment_Wholesalers*, *Medical_Dental_and_Hospital_Equipment_and_Supplies_Wholesalers*, *Computer_Equipment_and_Software_Wholesalers*, &amp; *Farm_Product_Raw_Material_Wholesalers*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.277194" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.275184" elapsed="0.002010"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Retail'">
+<kw name="Select Retail Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*Convenience_Stores*, *All_Other_General_Merchandise_Retailers*, *Gasoline_Stations_with_Convenience_Stores*, *Other_Gasoline_Stations*, *Furniture_Stores*, *Reupholstery_and_Furniture_Repair*, *Home_Centers*, *Hardware_Stores*, *New_Car_Dealers*, *Used_Car_Dealers*, *Beauty_Salons*, *Barber_Shops*, *Drycleaning_and_Laundry_Services*, &amp; *Coin-Operated_Laundries_and_Drycleaners*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.278270" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.277194" elapsed="0.001076"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Professional_Services'">
+<kw name="Select Professional Services Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*Landscape_Architectural_Services*, *Engineering_Services*, *Research_and_Development*, *Architectural_Services*, *Marketing_Consulting_Services*, *Miscellaneous_Intermediation*, *Administrative_and_General_Management_Consulting_Services*, *Other_Management_Consulting_Services*, *Tax_Preparation_Services*, *Public_Finance_Activities*, *Insurance_Agencies_and_Brokerages*, &amp; *All_Other_Insurance_Related_Activities*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.279260" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.278270" elapsed="0.000990"/>
+</branch>
+<branch type="ELSE IF" condition="'${Industry}' == 'Transportation'">
+<kw name="Select Transportation Services Industry NAICS" owner="Select_Industry_Page">
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used:
+*General_Freight_Trucking_Local*, *Distance_Truckload*, *Distance_Less_Than_Truckload*, *Specialized_Freight_Trucking_Local*, *Distance*, *Fuel_Dealers*, *Freight_Transportation*, *Bus_and_Other_Motor_Vehicle_Transit_Systems*, *School_and_Employee_Bus_Transportation*, *Interurban_and_Rural_Bus_Transportation*, *All_Other_Transit_and_Ground_Passenger_Transportation*, *Charter_Buses*, *Urban_Transit_Systems*, *Taxi_Service*, &amp; *Limousine_Service*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.279260" elapsed="0.000929"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.279260" elapsed="0.000929"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>No NAICS Description Matched</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.280189" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:22.281189" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-07-18T20:59:22.280189" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2025-07-18T20:59:22.189938" elapsed="0.091251"/>
+</if>
+<msg time="2025-07-18T20:59:22.281189" level="TRACE">Return: None</msg>
+<arg>${Industry}</arg>
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used for _Cannabis_:
+*Cannabis_Growing*, *Cannabis_Cultivation*, *Cannabis_Manufacturering*, *Cannabis_Dispensary*, &amp; *Cannabis Delivery*</doc>
+<status status="PASS" start="2025-07-18T20:59:22.188937" elapsed="0.092252"/>
+</kw>
+<msg time="2025-07-18T20:59:22.281189" level="TRACE">Return: None</msg>
+<arg>${Industry}</arg>
+<arg>${NAICS_DESC}</arg>
+<doc>Values need to be used for _Cannabis_:
+*Cannabis_Growing*, *Cannabis_Cultivation*, *Cannabis_Manufacturering*, *Cannabis_Dispensary*, &amp; *Cannabis Delivery*</doc>
+<status status="PASS" start="2025-07-18T20:59:22.187939" elapsed="0.093250"/>
+</kw>
+<msg time="2025-07-18T20:59:22.281189" level="TRACE">Return: None</msg>
+<arg>Restaurants_Bars_&amp;_Taverns</arg>
+<arg>Full-Service_Restaurants</arg>
+<doc>Values need to be used Industry:
+*Cannabis*, *Contractors*, *Real_Estate*, *Restaurants_Bars_&amp;_Taverns*, *Wholesale*, *Retail*, *Professional_Services*, &amp; *Transportation*</doc>
+<status status="PASS" start="2025-07-18T20:59:19.211570" elapsed="3.070715"/>
+</kw>
+<kw name="Select Cyber Carriers:" owner="Start_Application_Resource">
+<msg time="2025-07-18T20:59:22.283205" level="TRACE">Arguments: [ @{Carriers}=['Dual'] ]</msg>
+<kw name="Click on Cyber Carriers" owner="Select_Carrier_Page">
+<msg time="2025-07-18T20:59:22.283205" level="TRACE">Arguments: [ @{Carriers}=['Dual'] ]</msg>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-18T20:59:22.284195" level="TRACE">Arguments: [ '&gt;&gt;&gt; Processing Carrier: Dual' ]</msg>
+<msg time="2025-07-18T20:59:22.285194" level="INFO">&gt;&gt;&gt; Processing Carrier: Dual</msg>
+<msg time="2025-07-18T20:59:22.285194" level="TRACE">Return: None</msg>
+<arg>&gt;&gt;&gt; Processing Carrier: ${Carrier}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-18T20:59:22.284195" elapsed="0.000999"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-18T20:59:22.286193" level="TRACE">Arguments: [ {'Dual': "//div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]",
+ 'Cowbell': "//div[contains(.,'Cyber Insurance')]//label[contains(.,'Cowbell')]",
+ 'CFC-Admitted': "//div[contains(.,'Cyber Insurance')]//label[contains(.,'CFC- Admitted')]",
+ 'CFC-Non-Admitted': "//div[contains(.,'Cyber Insurance')]//label[contains(.,'CFC- Non-Admitted"} | 'Dual' ]</msg>
+<msg time="2025-07-18T20:59:22.286193" level="TRACE">Return: "//div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]"</msg>
+<msg time="2025-07-18T20:59:22.286193" level="INFO">${carrierID} = //div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]</msg>
+<var>${carrierID}</var>
+<arg>${Select_Cyber_Carriers}</arg>
+<arg>${Carrier}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-18T20:59:22.285194" elapsed="0.000999"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<msg time="2025-07-18T20:59:22.287217" level="TRACE">Arguments: [ "//div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]" ]</msg>
+<msg time="2025-07-18T20:59:24.162020" level="DEBUG">Scrolled to //div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')] field if needed.</msg>
+<msg time="2025-07-18T20:59:24.162020" level="TRACE">Return: None</msg>
+<arg>${carrierID}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-07-18T20:59:22.286193" elapsed="1.876905"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-18T20:59:24.166116" level="TRACE">Arguments: [ "//div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]" ]</msg>
+<msg time="2025-07-18T20:59:24.167027" level="INFO">Clicks the element '//div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]'.</msg>
+<msg time="2025-07-18T20:59:24.169108" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg time="2025-07-18T20:59:24.227028" level="DEBUG">Clicked element: '//div[contains(.,'Cyber Insurance')]//label[contains(.,'DUAL')]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg time="2025-07-18T20:59:24.228028" level="TRACE">Return: None</msg>
+<arg>${carrierID}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:24.163098" elapsed="0.064930"/>
+</kw>
+<var name="${Carrier}">Dual</var>
+<status status="PASS" start="2025-07-18T20:59:22.284195" elapsed="1.943833"/>
+</iter>
+<var>${Carrier}</var>
+<value>@{Carriers}</value>
+<status status="PASS" start="2025-07-18T20:59:22.284195" elapsed="1.943833"/>
+</for>
+<msg time="2025-07-18T20:59:24.228028" level="TRACE">Return: None</msg>
+<arg>@{Carriers}</arg>
+<doc>Provide Carrier Names: *Dual*, *Cowbell*, *CFC-Admitted*, *CFC-Non-Admitted*</doc>
+<status status="PASS" start="2025-07-18T20:59:22.283205" elapsed="1.944823"/>
+</kw>
+<msg time="2025-07-18T20:59:24.229031" level="TRACE">Return: None</msg>
+<arg>Dual</arg>
+<doc>Provide Carrier Names: *Dual*, *Cowbell*, *CFC-Admitted*, *CFC-Non-Admitted*</doc>
+<status status="PASS" start="2025-07-18T20:59:22.282285" elapsed="1.946746"/>
+</kw>
+<kw name="Click on Continue Button on the Select Carrier Page and verify Check Eligibility Page" owner="Start_Application_Resource">
+<msg time="2025-07-18T20:59:24.230028" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click on the Continue Button" owner="Select_Carrier_Page">
+<msg time="2025-07-18T20:59:24.231029" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-18T20:59:24.232027" level="TRACE">Arguments: [ "xpath=//button[normalize-space()='Continue']" ]</msg>
+<msg time="2025-07-18T20:59:24.232027" level="INFO">Clicks the element 'xpath=//button[normalize-space()='Continue']'.</msg>
+<msg time="2025-07-18T20:59:24.233028" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg time="2025-07-18T20:59:24.370626" level="DEBUG">Clicked element: 'xpath=//button[normalize-space()='Continue']' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg time="2025-07-18T20:59:24.371613" level="TRACE">Return: None</msg>
+<arg>${Continue_Button}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-18T20:59:24.231029" elapsed="0.140584"/>
+</kw>
+<msg time="2025-07-18T20:59:24.371613" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:24.231029" elapsed="0.140584"/>
+</kw>
+<kw name="Verify Page" owner="Check_Eligibility_Page">
+<msg time="2025-07-18T20:59:24.372613" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait For Condition" owner="Browser">
+<msg time="2025-07-18T20:59:24.373623" level="TRACE">Arguments: [ &lt;ConditionInputs.url: 'get_url'&gt; | 'contains' | 'start-application?currentScreen=CheckEligibility' ]</msg>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-07-18T20:59:24.375615" level="TRACE">Arguments: [ &lt;AssertionOperator.contains: '*='&gt; | 'start-application?currentScreen=CheckEligibility' ]</msg>
+<msg time="2025-07-18T20:59:26.930551" level="DEBUG">https://uat.squarerisk.net/start-application?currentScreen=CheckEligibility&amp;applicationId=b8f3a070-aa97-4c80-953e-0f37a7219a7a</msg>
+<msg time="2025-07-18T20:59:26.930551" level="DEBUG">Assertion polling statistics:
+First element asserted in: 0.004995584487915039 seconds
+Total tries: 203
+Elapsed time in retries 2.5499401092529297 seconds</msg>
+<msg time="2025-07-18T20:59:26.930551" level="TRACE">Return: 'https://uat.squarerisk.net/start-application?currentScreen=CheckEligibility&amp;applicationId=b8f3a070-aa97-4c80-953e-0f37a7219a7a'</msg>
+<arg>contains</arg>
+<arg>start-application?currentScreen=CheckEligibility</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-07-18T20:59:24.374635" elapsed="2.555916"/>
+</kw>
+<msg time="2025-07-18T20:59:26.930551" level="TRACE">Return: 'https://uat.squarerisk.net/start-application?currentScreen=CheckEligibility&amp;applicationId=b8f3a070-aa97-4c80-953e-0f37a7219a7a'</msg>
+<arg>Url</arg>
+<arg>contains</arg>
+<arg>start-application?currentScreen=CheckEligibility</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for a condition, defined with Browser getter keywords to become True.</doc>
+<status status="PASS" start="2025-07-18T20:59:24.372613" elapsed="2.557938"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-07-18T20:59:26.931549" level="TRACE">Arguments: [ &lt;PageLoadStates.domcontentloaded: 2&gt; ]</msg>
+<msg time="2025-07-18T20:59:26.931549" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2025-07-18T20:59:26.940541" level="INFO">Load state domcontentloaded got in 10000</msg>
+<msg time="2025-07-18T20:59:26.940541" level="TRACE">Return: None</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2025-07-18T20:59:26.931549" elapsed="0.008992"/>
+</kw>
+<msg time="2025-07-18T20:59:26.940541" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:24.372613" elapsed="2.567928"/>
+</kw>
+<msg time="2025-07-18T20:59:26.940541" level="TRACE">Return: None</msg>
+<status status="PASS" start="2025-07-18T20:59:24.230028" elapsed="2.710513"/>
+</kw>
+<kw name="What was the business revenue of the past 12 months?:" owner="Check_Eligibility_Resource">
+<msg time="2025-07-18T20:59:26.941538" level="TRACE">Arguments: [ ${Value}='$150000' ]</msg>
+<kw name="Provide Business Revenue" owner="Check_Eligibility_Page">
+<msg time="2025-07-18T20:59:26.944062" level="TRACE">Arguments: [ ${Value}='$150000' ]</msg>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-18T20:59:26.945060" level="TRACE">Arguments: [ "xpath=//label[contains(@id, 'companyRevenue')]" ]</msg>
+<msg time="2025-07-18T20:59:27.047428" level="INFO">Waited for Element with selector xpath=//label[contains(@id, 'companyRevenue')] at state visible</msg>
+<msg time="2025-07-18T20:59:27.047428" level="TRACE">Return: None</msg>
+<arg>${CompanyRevenue_Question}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-18T20:59:26.944062" elapsed="0.103366"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-18T20:59:27.050427" level="TRACE">Arguments: [ "xpath=//div//input[contains(@id, 'companyRevenue')]" | '$150000' | delay=datetime.timedelta(seconds=2) ]</msg>
+<msg time="2025-07-18T20:59:27.051426" level="INFO">Types the text '$150000' in the given field.</msg>
+<msg time="2025-07-18T20:59:37.276926" level="DEBUG">Screenshot successfully captured to: D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\Tests\results\browser\screenshot\fail-screenshot-1.png</msg>
+<msg time="2025-07-18T20:59:37.276926" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-18T20:59:37.276926" level="INFO">See also file:///D:/Softwares/Pycharm/RobotFramework/SR_Automation/SR_Automation/Regression%20Testing/Tests/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-07-18T20:59:37.276926" level="FAIL">TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')
+    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;
+  - elementHandle.type("$150000")
+</msg>
+<msg time="2025-07-18T20:59:37.405628" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 189, in grpc_channel
+    yield playwright_pb2_grpc.PlaywrightStub(self._channel)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\keywords\interaction.py", line 817, in _type_text
+    response = stub.TypeText(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 1181, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 1006, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: &lt;_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.DEADLINE_EXCEEDED
+	details = "TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')[22m
+[2m    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;[22m
+[2m  - elementHandle.type("$150000")[22m
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.type: Timeout 10000ms exceeded.\nCall log:\n\x1b[2m  - waiting for locator(\'//div//input[contains(@id, \\\'companyRevenue\\\')]\')\x1b[22m\n\x1b[2m    - locator resolved to &lt;input value=\"\" lang=\"en\" type=\"text\" ref=\"input\" inputmode=\"decimal\" pattern=\"$[0-9.,]*\" aria-required=\"true\" class=\"form-control\" aria-invalid=\"false\" id=\"etggeup-companyRevenue\" name=\"data[companyRevenue]\" aria-labelledby=\"l-etggeup-companyRevenue\"/&gt;\x1b[22m\n\x1b[2m  - elementHandle.type(\"$150000\")\x1b[22m\n", grpc_status:4}"
+&gt;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\browser.py", line 1280, in run_keyword
+    raise e
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\browser.py", line 1268, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\keywords\interaction.py", line 79, in type_text
+    self._type_text(
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\keywords\interaction.py", line 815, in _type_text
+    with self.playwright.grpc_channel() as stub:
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 193, in grpc_channel
+    raise AssertionError(error.details())
+AssertionError: TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')
+    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;
+  - elementHandle.type("$150000")</msg>
+<arg>${CompanyRevenue_Question_Input_Field}</arg>
+<arg>${Value}</arg>
+<arg>delay=2s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="FAIL" start="2025-07-18T20:59:27.048427" elapsed="10.357201">TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')
+    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;
+  - elementHandle.type("$150000")
+</status>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${CompanyRevenue_Question_Input_Field}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:37.406599" elapsed="0.000000"/>
+</kw>
+<arg>${Value}</arg>
+<doc>Provide *Numeric* Values only</doc>
+<status status="FAIL" start="2025-07-18T20:59:26.943053" elapsed="10.463546">TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')
+    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;
+  - elementHandle.type("$150000")
+</status>
+</kw>
+<arg>$150000</arg>
+<status status="FAIL" start="2025-07-18T20:59:26.941538" elapsed="10.466054">TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')
+    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;
+  - elementHandle.type("$150000")
+</status>
+</kw>
+<kw name="What is your state of primary operation?:" owner="Check_Eligibility_Resource">
+<arg>MA</arg>
+<doc>Provide Values:
+*AK*, *AL*, *AZ*, *AR*, *CA*, *CO*, *CT*, *DE*, *DC*, *FL*, *GA*, *HI*, *ID*, *IL*, *IN*, *IA*, *KS*, *KY*, *LA*, *ME*, *MD*, *MA*, *MI*, *MN*, *MS*, *MO*, *MT*, *NE*, *NV*, *NH*, *NJ*, *NM*, *NY*, *NC*, *ND*, *OH*, *OK*, *OR*, *PA*, *PR*, *RI*, *SC*, *SD*, *TN*, *TX*, *UT*, *VT*, *VA*, *VI*, *WA*, *WV*, *WI*, *WY*</doc>
+<status status="NOT RUN" start="2025-07-18T20:59:37.407592" elapsed="0.000000"/>
+</kw>
+<kw name="What is the desired Cyber coverage limit?" owner="Check_Eligibility_Resource">
+<arg>$15000</arg>
+<status status="NOT RUN" start="2025-07-18T20:59:37.407592" elapsed="0.000000"/>
+</kw>
+<kw name="Click on the Check Eligibility Button and Verify Start Application Page" owner="Check_Eligibility_Resource">
+<status status="NOT RUN" start="2025-07-18T20:59:37.408682" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-18T20:59:37.410674" level="TRACE">Set timeout to: 10000</msg>
+<msg time="2025-07-18T20:59:37.422629" level="INFO">Switching context to context=6b297d48-9391-4a9c-9a02-dce784e7d670 in CURRENT</msg>
+<msg time="2025-07-18T20:59:37.432024" level="INFO">Successfully changed active context: context=6b297d48-9391-4a9c-9a02-dce784e7d670</msg>
+<msg time="2025-07-18T20:59:37.515623" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-07-18T20:59:08.686303" elapsed="28.722379">TimeoutError: locator.type: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('//div//input[contains(@id, \'companyRevenue\')]')
+    - locator resolved to &lt;input value="" lang="en" type="text" ref="input" inputmode="decimal" pattern="$[0-9.,]*" aria-required="true" class="form-control" aria-invalid="false" id="etggeup-companyRevenue" name="data[companyRevenue]" aria-labelledby="l-etggeup-companyRevenue"/&gt;
+  - elementHandle.type("$150000")
+</status>
+</test>
+<doc>Perform SR Testcases</doc>
+<status status="FAIL" start="2025-07-18T20:59:07.385294" elapsed="30.132326"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testcase" id="s1" pass="0" fail="1" skip="0">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

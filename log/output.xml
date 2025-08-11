@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3rc3 (Python 3.12.1 on win32)" generated="2025-07-04T20:47:51.512554" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\Tests\TestCase.robot">
+<test id="s1-t1" name="Test1" line="268">
+<kw name="Open the Browser" owner="Common" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-04T20:47:52.622007" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Softwares\\Pycharm\\RobotFramework\\SR_Automation\\log\\browser\\traces\\temp\\001aea4b-4677-4ee1-a57c-f5590352ebb7"}</msg>
+<msg time="2025-07-04T20:47:52.652901" level="INFO">Starting Browser process C:\Users\Dell\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:64317</msg>
+<msg time="2025-07-04T20:47:53.975036" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Softwares\\Pycharm\\RobotFramework\\SR_Automation\\log\\browser\\traces\\temp\\001aea4b-4677-4ee1-a57c-f5590352ebb7"}</msg>
+<arg>browser=${Browser}</arg>
+<arg>headless=${Headless}</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-04T20:47:52.621006" elapsed="1.355029"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-04T20:47:54.004594" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": null
+}</msg>
+<msg time="2025-07-04T20:47:54.034844" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-04T20:47:54.035843" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': None}</msg>
+<arg>viewport=${None}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-04T20:47:53.977037" elapsed="0.058806"/>
+</kw>
+<status status="PASS" start="2025-07-04T20:47:52.619008" elapsed="1.416835"/>
+</kw>
+<kw name="Given SquareRiskPortal.Navigate to SquareRisk Agent Portal" owner="SquareRiskPortal">
+<kw name="Navigate to SquareRisk Agent Login page" owner="SR_Login_Page">
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-04T20:47:58.771693" level="INFO">Successfully initialized new page object and opened url: https://dev.squarerisk.net/login</msg>
+<arg>url=${URLs.${ENV}_Agent}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-04T20:47:54.038841" elapsed="4.732852"/>
+</kw>
+<status status="PASS" start="2025-07-04T20:47:54.037842" elapsed="4.733851"/>
+</kw>
+<kw name="Verify Page loaded" owner="SR_Login_Page">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-04T20:48:08.973876" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-04T20:48:08.973876" level="INFO">See also file:///D:/Softwares/Pycharm/RobotFramework/SR_Automation/log/playwright-log.txt for additional details.</msg>
+<msg time="2025-07-04T20:48:08.974876" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('xpath=(//img[@alt=\'Square Risk Logo\'])') to be visible
+</msg>
+<arg>${SR_img}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-07-04T20:47:58.773702" elapsed="10.219176">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('xpath=(//img[@alt=\'Square Risk Logo\'])') to be visible
+</status>
+</kw>
+<status status="FAIL" start="2025-07-04T20:47:58.772703" elapsed="10.220175">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('xpath=(//img[@alt=\'Square Risk Logo\'])') to be visible
+</status>
+</kw>
+<status status="FAIL" start="2025-07-04T20:47:54.036842" elapsed="14.956036">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('xpath=(//img[@alt=\'Square Risk Logo\'])') to be visible
+</status>
+</kw>
+<kw name="When Common.Get Email and Password of" owner="Common">
+<arg>Agent</arg>
+<status status="NOT RUN" start="2025-07-04T20:48:08.992878" elapsed="0.000000"/>
+</kw>
+<kw name="And Common.Get Dummy Data" owner="Common">
+<arg>MA</arg>
+<status status="NOT RUN" start="2025-07-04T20:48:08.993875" elapsed="0.000000"/>
+</kw>
+<kw name="Then SquareRiskPortal.Perform Login by providing Email &amp; Password" owner="SquareRiskPortal">
+<arg>${email}</arg>
+<arg>${Password}</arg>
+<status status="NOT RUN" start="2025-07-04T20:48:08.993875" elapsed="0.001002"/>
+</kw>
+<kw name="And SquareRiskPortal.Click &quot;Login&quot; Button and Verify the user navigated the Home Page" owner="SquareRiskPortal">
+<status status="NOT RUN" start="2025-07-04T20:48:08.994877" elapsed="0.000000"/>
+</kw>
+<kw name="And SquareRiskPortal.Click on &quot;+ Add New&quot; Button and verify Select Product Page" owner="SquareRiskPortal">
+<status status="NOT RUN" start="2025-07-04T20:48:08.994877" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-04T20:48:09.015905" level="INFO">Switching context to context=8585b240-c293-4cba-9f73-c5be9afe4e20 in CURRENT</msg>
+<msg time="2025-07-04T20:48:09.029916" level="INFO">Successfully changed active context: context=8585b240-c293-4cba-9f73-c5be9afe4e20</msg>
+<msg time="2025-07-04T20:48:09.114829" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-07-04T20:47:52.619008" elapsed="16.376867">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('xpath=(//img[@alt=\'Square Risk Logo\'])') to be visible
+</status>
+</test>
+<doc>Perform SR Testcases</doc>
+<status status="FAIL" start="2025-07-04T20:47:51.515550" elapsed="17.601279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCase" id="s1" pass="0" fail="1" skip="0">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-04T20:47:52.510476" level="ERROR">Error in file 'D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\Resources\PO\SR Agent Panel\Start-Application_Panel\Select_Carrier_Page.robot' on line 3: Library '..\..\..\..\SR_Custom_Library\SrCustomLib.py' does not exist.</msg>
+<msg time="2025-07-04T20:47:52.559475" level="ERROR">Error in file 'D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\Resources\Cyber_Resource.robot' on line 3: Resource file '..\Resources\PO\SR Agent Panel\Start-Application_Panel\Select_Industry_and_Product_Page.robot' does not exist.</msg>
+<msg time="2025-07-04T20:47:52.567485" level="ERROR">Error in file 'D:\Softwares\Pycharm\RobotFramework\SR_Automation\SR_Automation\Regression Testing\Resources\PO\SR Agent Panel\Start-Application_Panel\Check_Eligibility_Page.robot' on line 3: Library '..\..\..\..\SR_Custom_Library\SrCustomLib.py' does not exist.</msg>
+</errors>
+</robot>
